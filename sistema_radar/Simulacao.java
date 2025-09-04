@@ -4,16 +4,13 @@ public class Simulacao {
     
 public static void main(String[] args) {
     System.out.println("Simulaçao");
+    
 
-    Carro carro1 = new Carro();
-    carro1.ano = 76;
-    carro1.modelo = "Comodoro";
-    carro1.placa = "ACLR300";
-    carro1.velocidade = 0;
+    Carro carro1 = new Carro("ACLR300", "Comodoro", 76, 0);
+    
 
-    Radar radar = new Radar();
-    radar.velocidade = 60;
-    radar.localizacao = "Pistão Sul";
+    Radar radar = new Radar(60, "Pistão Sul" );
+    
 
     radar.avaliarVelocidade(carro1);
 
@@ -24,7 +21,6 @@ public static void main(String[] args) {
     carro1.acelerar();
     carro1.acelerar();
     carro1.acelerar(); // 70
-
     radar.avaliarVelocidade(carro1);
 
     carro1.frear();
